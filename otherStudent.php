@@ -9,47 +9,38 @@ This file is for showing the details of students
   </head>
   <body>
     <?php
-      $students =' [
-      {
-        "firstName":"John",
-        "lastName":"Doe",
-	    "PhoneNo":9830133272,
-	    "EmailId":"johndoe@gmail.com"
-      }, 
-      {
-        "firstName":"Anna",
-        "lastName":"Smith",
-	    "PhoneNo":7830133272,
-	    "EmailId":"annad@gmail.com"
-      },
-      {
-        "firstName":"Peter",
-        "lastName":"Jones",
-	    "PhoneNo":5630133272,
-	    "EmailId":"peter@gmail.com"
-      }
-      ]';
-	  //var_dump(json_decode($students, true));
-	  $arr = json_decode($students, true);
-	  //To show the data in a HTML table format
-	  echo "<table>
-	  <caption><h3>Students List</h3></caption>
-	  <tr>
-        <th><strong>FirstName</strong></th>&nbsp
-        <th><strong>LastName</strong></th>&nbsp
-        <th><strong>PhoneNo</strong></th>&nbsp
-        <th><strong>EmailId</strong></th>&nbsp
-      </tr>";
-       foreach($arr as $k=>$v)
-	   {
-	      echo "<tr>";
-		  foreach($v as $innerKey=>$innerValue)
-          {
-           	echo "<td><strong>$innerValue</strong></td>";
+     if(file_get_contents ('./entries.json'))
+	  {
+	     $data=file_get_contents ('./entries.json');
+		 $arr = json_decode($data, TRUE);
+	     $count=0;
+	     //To show the data in a HTML table format
+	     echo "<table> <caption><h3>Students List</h3></caption> ";
+		 //To show table header.It should only traverse all columns for 1 st row,So the count variable is taken
+	     foreach($arr as $k=>$v)
+	     {
+	       echo "<tr>";
+		   if($count==1)
+			  break;
+		    $count++;
+		   foreach($v as $innerKey=>$innerValue)
+           {
+			 echo "<th><strong>$innerKey</strong></th>"; 
+		   }
+		   echo "</tr>";
+		 }
+		 //To show all records.It should traverse all rows and columns.
+         foreach($arr as $k=>$v)
+	     {
+	       echo "<tr>";
+		   foreach($v as $innerKey=>$innerValue)
+           {
+			echo "<td><strong>$innerValue</strong></td>";
            }
 		   echo "</tr>";
-		}
-      echo "</table>";
+		 }
+         echo "</table>";
+	   }
 	?>
-    </body>
+  </body>
 </html>

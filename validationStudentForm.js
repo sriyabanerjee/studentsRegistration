@@ -107,7 +107,7 @@ $(document).ready(function(){
 	  }
 	  if(errorMsg=="")
 	  {
-		e.preventDefault();
+		/*e.preventDefault();
 		$(this).hide();
 		$("#showPersonalFirstName").val($("#firstname").val());
 		$("#showPersonalLastName").val($("#lastname").val());
@@ -130,7 +130,9 @@ $(document).ready(function(){
 		$("#showGurdianPhnno").val($("#gurphoneno").val());
 		$("#showGurdianOccupation").val($("#guroccupation").val());
 		$("#showInformation").show();
-		return true; 	
+		//$form_state['redirect'] = false;
+		this.submit(); 	*/
+		return true;
 	  }
 		  
 	  else

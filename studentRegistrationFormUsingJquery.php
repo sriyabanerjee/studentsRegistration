@@ -1,4 +1,4 @@
-/*This file is for Student registration*/
+<!--This file is for Student registration -->
 <html>
   <head>
     <title>
@@ -12,7 +12,7 @@
     <script type="text/javascript" src="validationStudentForm.js"></script>
 	
     <h1><marquee>Student Registration Form</marquee></h1>
-    <form name="student"  action="" >
+    <form name="student"  action="http://localhost/test/studentInformation.php" method="post">
       <fieldset class="informations">
         <legend>Personal Information:</legend>
         <label for="firstname">First Name:</label>
@@ -22,7 +22,7 @@
         <input type="text" name="lastname" id="lastname" ><br>&nbsp
 		<span id="lastnameerror" class="error"></span><br>
 		<label for="address">Address:</label>
-        <textarea id="address" class="addr"></textarea><br><br>
+        <textarea name="address" id="address" class="addr"></textarea><br><br>
 		<label for="country">Country:</label>
         <input type="text" name="country" id="country"><br><br>
 		<label for="state">State:</label>
@@ -33,12 +33,12 @@
         <input type="text" name="phnno" id="phnno" ><br>&nbsp
 		<span id="phnnoerror" class="error"></span><br>
 		<label for="gender">Gender:</label>
-        <select id="gender">
+        <select id="gender" name="gender">
           <option value="male">Male</option>
           <option value="female">Female</option>
         </select><br><br>
 		<label for="dob">DOB:</label>
-        <select id="dob">
+        <select id="dob" name="dob">
          <option value="1">1</option>
          <option value="1">2</option>
          <option value="3">3</option>
@@ -71,7 +71,7 @@
          <option value="30">30</option>
          <option value="31">31</option>
         </select>
-        <select id="dom">
+        <select id="dom" name="dom">
           <option value="1">January</option>
           <option value="2">February</option>
           <option value="3">March</option>
@@ -85,7 +85,7 @@
           <option value="11">November</option>
           <option value="12">December</option>
         </select>
-        <select id="doy">
+        <select id="doy" name="doy">
           <option value="2000">2000</option>
           <option value="2001">2001</option>
           <option value="2002">2002</option>
@@ -104,7 +104,7 @@
         <input type="text" name="emailid" id="emailid" size="40px"  ><br>&nbsp
 		<span id="emailiderror" class="error"></span><br>
         <label for="class">Class:</label>
-       <select id="class">
+       <select id="class" name="class">
          <option value="1">1</option>
          <option value="2">2</option>
          <option value="3">3</option>
@@ -118,34 +118,35 @@
          <option value="11">11</option>
          <option value="12">12</option>
         </select><br><br>
+		
       </fieldset><br><br>
       <fieldset>
         <legend>Gurdian's Information</legend>
         <label for="gurfirstname">First Name:</label>
-		<input type="text" name="Gurdian's firstname" id="gurfirstname" ><br>&nbsp
+		<input type="text" name="gurfirstname" id="gurfirstname" ><br>&nbsp
 		<span id="gurfirstnameerror" class="error"></span><br>
         <label for="gurlastname">Last Name:</label>
-		<input type="text" name="Gurdian's lastname" id="gurlastname" ><br>&nbsp
+		<input type="text" name="gurlastname" id="gurlastname" ><br>&nbsp
 		<span id="gurlastnameerror" class="error"></span><br>
         <label for="relationship">Relationship:</label>
-        <select id="relationship">
+        <select id="relationship" name="relationship">
           <option value="Father">Father</option>
           <option value="Mother">Mother</option>
           <option value="Others">Others</option>
         </select><br><br>
         <label for="guraddress">Address:</label>
-		<textarea name="address" id="guraddress" class="addr"></textarea><br><br>
+		<textarea name="guraddress" id="guraddress" class="addr"></textarea><br><br>
         <label for="gurcountry">Country:</label>
-		<input type="text" name="country" id="gurcountry"><br><br>
+		<input type="text" name="gurcountry" id="gurcountry"><br><br>
         <label for="gurstate">State:</label>
-		<input type="text" name="state" id="gurstate"><br><br>
+		<input type="text" name="gurstate" id="gurstate"><br><br>
         <label for="gurnationality">Nationality:</label>
-		<input type="text" name="nationality" id="gurnationality"><br><br>
+		<input type="text" name="gurnationality" id="gurnationality"><br><br>
         <label for="gurphoneno">Phone No:</label>
-		<input type="text" name="phnNo" id="gurphoneno" ><br>&nbsp
+		<input type="text" name="gurphnNo" id="gurphoneno" ><br>&nbsp
 		<span id="gurphonenoerror" class="error"></span><br>
         <label for="guroccupation">Occupation:</label>
-		<input type="text" name="occupation" id="guroccupation"><br><br>
+		<input type="text" name="guroccupation" id="guroccupation"><br><br>
       </fieldset>
 	  <div id="locator">
 		<img src="kids.jpg" alt="pics"><br>
