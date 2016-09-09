@@ -1,0 +1,51 @@
+body {
+  background-color: linen
+}
+fieldset {
+  width:700px;
+  padding: 2em;
+  border: 2px solid green;
+  float: middle;
+}
+legend {
+  padding: 0.5em;
+  border: 2px solid green;
+  color: green;
+  font-size: 95%;
+  text-align: left;
+  }
+h1{
+  color: red;
+  text-align: center;
+}
+h2{
+  color: blue;
+  text-align: center;
+}
+label {
+  float:left;
+  width:25%;
+  margin-right:0.5em;
+  padding-top:0.2em;
+  text-align:right;
+  font-weight:bold;
+  }
+ .addr{
+	height:100px;
+    width:200px;
+	overflow:scroll
+ }
+ #locator { 
+ position: absolute;
+ visibility: visible; 
+ left: 820px; 
+ top: 100px; 
+ height: 300px; 
+ width: 100px;
+ z-index: 100;
+ }
+ .error{
+	 color:red;
+	 font-size:70%;
+	 font-weight:bold;
+ }

@@ -1,0 +1,4 @@
+<h2>Course Name = MCA</h2><br>
+<h2>Duration=3 years</h2><br>
+<h2>Semester fees=Rs.480000 per semester</h2><br>
+<h2>Admission fees=Rs.78000 </h2><br>
